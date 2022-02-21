@@ -53,7 +53,6 @@ public class PersonService {
     }
 
 
-
     public MessageResponseDTO updateById(Long id, PersonDTO personDTO) throws PersonNotFoundException {
         
         verifyIfExists(id);

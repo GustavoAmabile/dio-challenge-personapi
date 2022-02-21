@@ -32,9 +32,10 @@ public class PersonController {
     }
 
     @GetMapping
+
     public List<PersonDTO> listAll(){
         return personService.listAll();
-
+        
     }
 
     @GetMapping("/{id}")
@@ -42,7 +43,7 @@ public class PersonController {
         return personService.findById(id);
     }
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
         return personService.updateById(id, personDTO);
     }
